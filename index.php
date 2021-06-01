@@ -1,4 +1,8 @@
+<?php
 
+    include('facebook_login.php');
+
+?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -26,7 +30,15 @@
             </div>
             <div class="d-grid gap-2">
                 <button class="btn btn-primary" type="submit">Login</button>
+                <br>
             </div>
+            <?php
+                if(isset($facebook_login_url)){
+                    echo $facebook_login_url;
+                }else{
+                    header('location:dashboard.php');
+                }
+            ?>
         </form>
     </div>
   </body>

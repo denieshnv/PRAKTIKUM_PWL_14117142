@@ -1,10 +1,9 @@
-<?php
-
-$koneksi = mysql_connect("localhost","root","","loginpwl")
-    if($koneksi){
-
-    }else{
-        echo "<script>alert('Gagal koneksi ke database');</script>";
-    }
-
+<?php 
+$koneksi = mysqli_connect("localhost","root","","loginpwl");
+ 
+// Check connection
+if (mysqli_connect_errno()){
+	echo "Koneksi database gagal : " . mysqli_connect_error();
+}
+ 
 ?>
